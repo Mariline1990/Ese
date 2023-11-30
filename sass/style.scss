@@ -1,1 +1,103 @@
-@import "/sass/font";
+@import "colori";
+@import "font";
+@import "reset";
+@import "bottoni";
+@import "spaziature";
+@import "mixinsGenerici";
+nav {
+  background-color: $color-btn-blue;
+}
+.main-1 {
+  @include m-p(30px, 50px);
+  display: flex;
+  justify-content: center;
+}
+@mixin baseCont() {
+  font: 100% $font-stack;
+  display: flex;
+}
+.container {
+  @include baseCont();
+
+  justify-content: space-between;
+
+  .cont-2 {
+    @include m-p(30px, 50px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+  }
+
+  .cont-3 {
+    @include m-p(30px, 50px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+
+    div {
+      input {
+        padding: 8px 30px;
+      }
+    }
+  }
+}
+
+.container2 {
+  width: 90%;
+  @include baseCont();
+  background-color: $bg-hero;
+  @include m-p(50px, 50px);
+  .col-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+
+    h1 {
+      @include title-big($font-size-h);
+    }
+    h3 {
+      @include title-big($font-size-s);
+    }
+    .cont-b {
+      .bot-1 {
+        @include floating();
+        @include btn($color-btn-blue, rgba(123, 133, 221, 0.514));
+      }
+      .bot-2 {
+        @include floating();
+        @include btn($color-btn-orange, rgba(255, 123, 0, 0.637));
+      }
+      .bot-3 {
+        @include floating();
+        @include btn($color-btn-green, rgba(0, 255, 34, 0.575));
+      }
+    }
+  }
+
+  .col-2 {
+    width: 40%;
+    img {
+      @include floating();
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    div {
+      @include floating();
+      background-color: aquamarine;
+      width: 400px;
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin m-p($pixels-x, $pixels-y) {
+  padding-top: $pixels-x;
+  padding-bottom: $pixels-y;
+  margin-left: $pixels-x;
+  margin-right: $pixels-y;
+}
